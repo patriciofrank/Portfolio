@@ -1,0 +1,325 @@
+html {
+  box-sizing: border-box;
+}
+html *, html *:before, html *:after {
+  box-sizing: inherit;
+}
+html footer {
+  background-color: #000;
+  height: 2rem;
+}
+html body {
+  background: rgba(24, 84, 115, 0.3);
+}
+html body h1 {
+  font-family: "Old Standard TT", serif;
+}
+html body a, html body h2, html body h3, html body h4 {
+  font-family: "Hind", sans-serif;
+}
+html body p, html body button {
+  font-family: "Source Sans Pro", sans-serif;
+}
+html body h2 {
+  font-size: 2.5rem;
+  -webkit-text-decoration: underline solid 0.3rem;
+          text-decoration: underline solid 0.3rem;
+}
+html body h3 {
+  font-size: 2rem;
+}
+html body p {
+  font-size: 1.5rem;
+}
+html body #nav {
+  background: black;
+  font-size: 0.9rem;
+}
+html body #nav #navBar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  position: fixed;
+  top: 0;
+  background: black;
+  width: 100%;
+  height: 5%;
+}
+html body #nav #navBar a {
+  text-decoration: none;
+  color: white;
+}
+html body #home {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+html body #home .homePrin {
+  width: auto;
+}
+html body #home .homePrin video {
+  display: none;
+}
+html body #home .homePrin .nombreImagen {
+  display: flex;
+  flex-flow: column;
+  top: 0;
+  left: 0;
+}
+html body #home .homePrin .nombrePresentacion {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+html body #home .homePrin .nombrePresentacion h1 {
+  font-size: 2rem;
+  margin-top: 20%;
+  padding: 0.5rem;
+}
+html body #home .homePrin .nombrePresentacion h1 span {
+  font-size: 2.5rem;
+}
+html body #home .homePrin .nombrePresentacion h1, html body #home .homePrin .nombrePresentacion h2 {
+  padding: 1rem;
+}
+html body #home .homePrin a {
+  align-self: center;
+}
+html body #home .homePrin a img {
+  padding-bottom: 3.3rem;
+  width: 300px;
+}
+html body #clockdate {
+  margin-top: -7%;
+}
+html body #clockdate .clockdate-wrapper {
+  background-color: #333;
+  padding: 25px;
+  max-width: 350px;
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 15%;
+}
+html body #clockdate #clock {
+  background-color: #333;
+  font-family: sans-serif;
+  font-size: 4rem;
+  text-shadow: 0px 0px 1px #fff;
+  color: #fff;
+}
+html body #clockdate #date {
+  letter-spacing: 0.5rem;
+  font-size: 1rem;
+  font-family: arial, sans-serif;
+  color: #fff;
+}
+html body #abaut {
+  justify-content: center;
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: solid black;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: center;
+}
+html body #abaut .abautMe {
+  max-width: 100%;
+}
+html body #abaut .abautSkils {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1rem;
+  text-align: center;
+  justify-content: center;
+}
+html body #abaut .abautSkils div {
+  display: grid;
+  justify-content: center;
+}
+html body #abaut .abautSkils div p {
+  font-size: 1rem;
+}
+html body #abaut svg {
+  justify-self: center;
+  width: 2rem;
+  display: block;
+}
+html body #proyects {
+  margin: auto;
+}
+html body #proyects img {
+  border: #000 solid 0.3rem;
+}
+html body #proyects h3 {
+  font-size: 1rem;
+}
+html body #contact {
+  margin-top: 3rem;
+  text-align: center;
+}
+html body #contact div {
+  margin: 2rem 0 1.5rem 0;
+}
+html body #contact section {
+  text-align: center;
+}
+html body #contact section a {
+  text-decoration: none;
+}
+html body #contact section h3 {
+  font-size: 1.5rem;
+  color: #000;
+}
+html body #contact svg {
+  max-width: 2rem;
+  max-height: 2rem;
+}
+@media (min-width: 450px) {
+  html body #contact {
+    margin-top: 5rem;
+    text-align: center;
+  }
+  html body #contact div {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 2rem 0 1.5rem 0;
+  }
+  html body #contact section {
+    text-align: center;
+  }
+  html body #contact section a {
+    text-decoration: none;
+  }
+  html body #contact section h3 {
+    color: #000;
+  }
+  html body #contact svg {
+    max-width: 4rem;
+    max-height: 4rem;
+  }
+}
+@media (min-width: 750px) {
+  html body #nav {
+    font-size: 2rem;
+  }
+  html body #nav #navBar {
+    justify-content: space-around;
+    gap: 2rem;
+    width: 100%;
+  }
+  html body #nav #navBar a:hover {
+    font-size: 110%;
+    color: rebeccapurple;
+  }
+  html body #home {
+    justify-content: space-around;
+    align-items: center;
+  }
+  html body #home .homePrin {
+    width: 100%;
+  }
+  html body #home .homePrin video {
+    display: block;
+    width: 100%;
+    max-height: 400px;
+  }
+  html body #home .homePrin .imgPort {
+    align-items: center;
+  }
+  html body #home .homePrin .imgPort:hover {
+    filter: grayscale(1);
+    align-self: auto;
+  }
+  html body #home .homePrin .nombreImagen {
+    position: absolute;
+    display: flex;
+    flex-flow: row;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+  html body #home .homePrin .nombrePresentacion {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    width: 100%;
+    height: 400px;
+  }
+  html body #home .homePrin .nombrePresentacion h1 {
+    font-size: 3rem;
+  }
+  html body #home .homePrin .nombrePresentacion h1 span {
+    font-size: 4rem;
+  }
+  html body #home .homePrin img {
+    max-width: 300px;
+    padding: 4rem 2rem 2rem 2rem;
+    background: rgba(0, 0, 0, 0.8);
+    align-self: end;
+  }
+  html body #abaut {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    border: solid black;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  html body #abaut .abautMe {
+    max-width: 100%;
+  }
+  html body #abaut .abautSkils {
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    text-align: center;
+    justify-content: center;
+  }
+  html body #abaut .abautSkils div {
+    display: grid;
+    justify-content: center;
+  }
+  html body #abaut svg {
+    width: 3rem;
+    display: block;
+  }
+  html body #proyects {
+    margin: auto;
+  }
+  html body #proyects img {
+    border: #000 solid 0.3rem;
+  }
+  html body #proyects img:hover {
+    padding: 2%;
+  }
+  html body #proyects h3 {
+    font-size: 2rem;
+  }
+  html body #contact {
+    margin-top: 5rem;
+    text-align: center;
+  }
+  html body #contact div {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 2rem 0 1.5rem 0;
+  }
+  html body #contact section {
+    text-align: center;
+  }
+  html body #contact section h3 {
+    color: #000;
+  }
+  html body #contact svg {
+    max-width: 4rem;
+    max-height: 4rem;
+  }
+}/*# sourceMappingURL=style.css.map */
