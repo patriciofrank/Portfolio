@@ -1,31 +1,55 @@
 // Arrays
-class poryect{
-    constructor(titulo,img,desc,url,repository){
-        this.titulo=titulo;
-        this.img=img
-        this.desc=desc
-        this.url=url
-        this.repository=repository
-    }
+class poryect {
+  constructor(titulo, img, desc, url, repository) {
+    this.titulo = titulo;
+    this.img = img;
+    this.desc = desc;
+    this.url = url;
+    this.repository = repository;
+  }
 }
 
-const proyectos=[];
+const proyectos = [];
 
-let page0=new poryect ("Landing Page","/assets/cym.png","Con Telas y Mas is landing page created using Html ,SASS, BootStrap and repositorys in Git and GitHub.","https://contelasymas.netlify.app/","https://github.com/patriciofrank/Landing");
-let page1=new poryect ("Game Page","/assets/DQ.png","Dungeon Quest is a little game page created using Html ,SASS, JavaScript,Sweetalert2, BootStrap and repositorys in Git and GitHub.","https://dungeonquestjs.netlify.app/","https://github.com/patriciofrank/DungeonQuest");
-let page2=new poryect ("Blog","/assets/blog.png","A blog page created using Html and CSS.","https://proyecto3-paf.netlify.app/","");
-let page3=new poryect ("Static E-commers","/assets/ecom.png","A static e-commers page created using Html ,CSS.","https://proyecto2-paf.netlify.app/","");
+let page0 = new poryect(
+  "Landing Page",
+  "/assets/cym.png",
+  "Con Telas y Mas is landing page created using Html ,SASS, BootStrap and repositorys in Git and GitHub.",
+  "https://contelasymas.netlify.app/",
+  "https://github.com/patriciofrank/Landing"
+);
+let page1 = new poryect(
+  "Game Page",
+  "/assets/DQ.png",
+  "Dungeon Quest is a little game page created using Html ,SASS, JavaScript,Sweetalert2, BootStrap and repositorys in Git and GitHub.",
+  "https://dungeonquestjs.netlify.app/",
+  "https://github.com/patriciofrank/DungeonQuest"
+);
+let page2 = new poryect(
+  "Blog",
+  "/assets/blog.png",
+  "A blog page created using Html and CSS.",
+  "https://proyecto3-paf.netlify.app/",
+  ""
+);
+let page3 = new poryect(
+  "Static E-commers",
+  "/assets/ecom.png",
+  "A static e-commers page created using Html ,CSS.",
+  "https://proyecto2-paf.netlify.app/",
+  ""
+);
 
-proyectos.push(page0)
-proyectos.push(page1)
-proyectos.push(page2)
-proyectos.push(page3)
-console.table(proyectos)
+proyectos.push(page0);
+proyectos.push(page1);
+proyectos.push(page2);
+proyectos.push(page3);
+console.table(proyectos);
 
 //Navbar
-function nav(){
-let nav = document.getElementById('nav')
-nav.innerHTML=`
+function nav() {
+  let nav = document.getElementById("nav");
+  nav.innerHTML = `
 <nav id="navBar">
     <div>
       <a id="btnH" href="#home">Home</a>
@@ -42,9 +66,9 @@ nav.innerHTML=`
 </nav>`;
 }
 // Home
-function home(){
-let home = document.getElementById('home')
-home.innerHTML=`
+function home() {
+  let home = document.getElementById("home");
+  home.innerHTML = `
 <div class="homePrin" >
 <video style="object-fit: cover;" autoplay muted preload loop src="/assets/Matriz.mp4"></video>
 <div class="nombreImagen">
@@ -55,42 +79,56 @@ home.innerHTML=`
 <a href="#contact"><img class="imgPort"  src="/assets/foto.png" alt="foto Patricio"></a>
 </div>
 </div>
-`
+`;
 }
 // Clock
 
-
 function startTime() {
-    let today = new Date();
-    let hr = today.getHours();
-    let min = today.getMinutes();
-    let sec = today.getSeconds();
-    hr = checkTime(hr);
-    min = checkTime(min);
-    sec = checkTime(sec);
-    document.getElementById("clock").innerHTML = hr + ":" + min + ":" + sec + " ";
-    
-    let months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
-    let days = ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'];
-    let curWeekDay = days[today.getDay()];
-    let curDay = today.getDate();
-    let curMonth = months[today.getMonth()];
-    let curYear = today.getFullYear();
-    let date = curWeekDay+" "+curDay+" "+curMonth+" "+curYear;
-    document.getElementById("date").innerHTML = date;
-    
-    let time = setTimeout(function(){ startTime() }, 500);
+  let today = new Date();
+  let hr = today.getHours();
+  let min = today.getMinutes();
+  let sec = today.getSeconds();
+  hr = checkTime(hr);
+  min = checkTime(min);
+  sec = checkTime(sec);
+  document.getElementById("clock").innerHTML = hr + ":" + min + ":" + sec + " ";
+
+  let months = [
+    "Enero",
+    "Febrero",
+    "Marzo",
+    "Abril",
+    "Mayo",
+    "Junio",
+    "Julio",
+    "Agosto",
+    "Septiembre",
+    "Octubre",
+    "Noviembre",
+    "Diciembre",
+  ];
+  let days = ["Dom", "Lun", "Mar", "Mie", "Jue", "Vie", "Sab"];
+  let curWeekDay = days[today.getDay()];
+  let curDay = today.getDate();
+  let curMonth = months[today.getMonth()];
+  let curYear = today.getFullYear();
+  let date = curWeekDay + " " + curDay + " " + curMonth + " " + curYear;
+  document.getElementById("date").innerHTML = date;
+
+  let time = setTimeout(function () {
+    startTime();
+  }, 500);
 }
 function checkTime(i) {
-    if (i < 10) {
-        i = "0" + i;
-    }
-    return i;
+  if (i < 10) {
+    i = "0" + i;
+  }
+  return i;
 }
 // Functions
-function setAbaut(){
-let abt = document.getElementById("abaut");
-abt.innerHTML=`
+function setAbaut() {
+  let abt = document.getElementById("abaut");
+  abt.innerHTML = `
 <div class="abautMe">
 <h2>Abaut Me</h2>
 <p>I studied web development at Coderhause, looking for a new job horizon based on my tastes. At this moment I am developing my own projects to improve my skills and knowledge of layout and programming. I am also looking for job opportunities that help me continue learning and growing within this beautiful environment.    
@@ -108,42 +146,41 @@ abt.innerHTML=`
 </div>
 </div>`;
 }
-function setProyecto(){
-    let pro = document.getElementById("proyects");
-    let title=document.createElement("div")
-    title.innerHTML="<h2>Proyects</h2>";
-    title.className=("text-center");
-    title.style=("width:100%;")
-    pro.append(title)
-for ( element of proyectos) {
-   
-    let card=document.createElement("div")
-    card.className=("col")
-    
-    card.innerHTML=`
-    <div class="card" style="position:unset;">
+function setProyecto() {
+  let pro = document.getElementById("proyects");
+  let title = document.createElement("div");
+  title.innerHTML = "<h2>Proyects</h2>";
+  title.className = "text-center";
+  title.style = "width:100%;";
+  pro.append(title);
+  for (element of proyectos) {
+    let card = document.createElement("div");
+    card.className = "col";
+
+    card.innerHTML = `
+    <div class="proyect" style="position:unset;">
         <a href="${element.url}"target="_blank">
         <img src="${element.img}" class="card-img-top" alt="${element.titulo}">
         </a>
-    <div class="card-body">
-        <h3 class="card-title text-center">${element.titulo}</h3>
-        <p class="card-text text-center">${element.desc}</p>
-        <div class="d-grid gap-2 col-6 mx-auto">
+        <div class="textProyect">
+        <h3 >${element.titulo}</h3>
+        <p >${element.desc}</p>
+        <div class="btnProyect">
             <a href="${element.url}" class="btn btn-primary"  target="_blank">Visit Site</a>
             <a href="${element.repository}" class="btn btn-primary"  target="_blank">Visit Repository</a>
         </div>
     </div>
     </div>
      
-     `
-     pro.append(card)    
-};
+     `;
+    pro.append(card);
+  }
 }
-function setContact(){
-    let cont = document.getElementById("contact");
-    cont.innerHTML=`<h2>Contact</h2>`
-    let setcont=document.createElement("div")
-    setcont.innerHTML=`
+function setContact() {
+  let cont = document.getElementById("contact");
+  cont.innerHTML = `<h2>Contact</h2>`;
+  let setcont = document.createElement("div");
+  setcont.innerHTML = `
     <section>
         <a href="https://github.com/patriciofrank"  target="_blank">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>  
@@ -163,13 +200,12 @@ function setContact(){
         </a>
     </section>
     `;
-    cont.append(setcont)
-    }
-
+  cont.append(setcont);
+}
 
 //Events
 home();
-nav();    
+nav();
 setProyecto();
 setAbaut();
 setContact();
