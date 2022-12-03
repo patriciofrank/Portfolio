@@ -142,6 +142,18 @@
     transition: trasform 2.25s;
     background-color: antiquewhite;
   }
+  #imgP {
+    rotate: 15deg;
+  }
+  #imgPr {
+    rotate: 105deg;
+  }
+  #imgC {
+    rotate: 90deg;
+  }
+  #navMenu {
+    margin-left: -10%;
+  }
 
   /* Clock */
   html body #clockdate {
@@ -297,7 +309,7 @@
   .imagen {
     width: calc(100% / 4);
     display: flex;
-justify-content: center;
+    justify-content: center;
   }
   .imagen img {
     max-width: 300px;
@@ -324,17 +336,239 @@ justify-content: center;
     height: 50vh;
     font-size: 3rem;
     color: black;
-    position:absolute;
-    top:72%;
+    position: absolute;
+    top: 72%;
     right: 0;
   }
-  .punto{
+  .punto {
     background-color: aliceblue;
     padding: 0 2px 8px 2px;
     font-size: 3rem;
   }
 }
 @media (min-width: 600px) {
-  
-}
+  /* Menu */
+  #navMenu {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 42px;
+    background-color: #c0c0c0;
+    display: flex;
+    flex-direction: initial;
+    align-content: center;
+    z-index: 50;
+  }
+  .menu {
+    list-style: none;
+  }
+  .toggle img {
+    justify-content: center;
+    width: 35px;
+    cursor: pointer;
+  }
+  .menu li img {
+    width: 45px;
+    margin: 0 25px;
+  }
+  #imgP,
+  #imgPr,
+  #imgC {
+    rotate: none;
+  }
+  .menu li {
+    display: none;
+  }
+  .menu .toggle {
+    position: absolute;
+    bottom: 6px;
+    left: 5px;
+    background-color: #c0c0c0;
+    width: 94px;
+    height: 29px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-width: 0px 1px 1px 0px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .menu.active li {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #c0c0c0;
+    position: relative;
+    left: -29px;
+    bottom: -49px;
+    margin-top: -100px;
+  }
+  .menu li button {
+    width: 188px;
+    background-color: #c0c0c0;
+    align-content: flex-start;
+  }
+  .menu li button:hover {
+    transition: 0;
+    background: #c1c1c1;
+    box-shadow: 10px 0 10px #00807f;
+  }
+  .toggle:hover {
+    filter: grayscale(100%);
+    box-shadow: 0 0 10px #00807f;
+  }
+  .clockdate-wrapper {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    z-index: 50;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 0.75rem;
+  }
+  #abaut {
+    width: 600px;
+    height: 610px;
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    overflow: hidden;
+    background: url("/assets/word.gif");
+    background-size: cover;
+    z-index: 10;
+  }
+  .abautMe > h2 {
+    background-color: #fff;
+    width: 80%;
+  }
+  .abautMe > p {
+    width: 95%;
+  }
+  .abautMe {
+    position: relative;
+    top: 157px;
+    left: 10px;
+  }
+  .abautSkils {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(2, 1fr);
+    text-align: center;
+    justify-content: center;
+    max-height: fit-content;
+    width: 95%;
+  }
+  .abautSkils svg {
+    max-width: 20px;
+  }
+  #info {
+    width: 364px;
+    height: 628px;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    overflow: hidden;
+    background: url("/assets/paint.png");
+    background-size: cover;
+    z-index: 0;
+  }
+  .infoImg {
+    background: #fff;
+    width: 285px;
+    position: relative;
+    left: 79px;
+    top: 53px;
+    text-align: center;
+  }
 
+  .infoText {
+    background: #fff;
+    width: 285px;
+    position: relative;
+    left: 79px;
+    top: 53px;
+    text-align: center;
+    height: 337px;
+  }
+  .imgPort {
+    width: 112px;
+  }
+  #contact {
+    text-align: center;
+    background: #c0c0c0;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    width: 500px;
+    z-index: 40;
+  }
+  #contact > h2 {
+    background-color: #0000a8;
+    color: white;
+    text-align: initial;
+    padding: 3px 20px;
+  }
+  .contactContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+  }
+  .contactContainer section a {
+    color: #080808;
+    text-decoration: none;
+  }
+  .contactContainer section a svg {
+    width: 50px;
+  }
+  #proyects {
+    width: 600px;
+    height: 610px;
+    position: absolute;
+    top: 2%;
+    right: 0;
+    overflow: hidden;
+    background: url("/assets/folder.png");
+    background-size: cover;
+    z-index: 10;
+  }
+  #proyects h2 {
+    position: relative;
+    top: 139px;
+    left: 120px;
+    font-size: 1.5rem;
+    background-color: #fff;
+    height: 26px;
+    margin-bottom: 18px;
+  }
+  .puntos {
+    display: none;
+  }
+  .carrusel {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 1fr);
+    width: 350px;
+    height: 390px;
+    position: relative;
+    right: -237px;
+    top: 137px;
+    background: #fff;
+    gap: 7px;
+  }
+  .textProyect h3 {
+    text-align: center;
+    font-size: 1rem;
+  }
+  .textProyect p {
+    display: none;
+  }
+  .btnProyect {
+    display: none;
+  }
+  .card-img-top:hover{
+  transform: rotate(1turn); 
+  transition: .2s;
+  }
+}

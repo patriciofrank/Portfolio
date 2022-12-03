@@ -1,3 +1,16 @@
+// welcome text
+function cleaner() {
+  const b = document.getElementById("home");
+  const c = document.getElementById("info");
+  const d = document.getElementById("proyects");
+  const e = document.getElementById("contact");
+  const a = document.getElementById("abaut");
+  a.style = "display:none;";
+  b.style = "display:none;";
+  c.style = "display:none;";
+  d.style = "display:none;";
+  e.style = "display:none;";
+}
 const home = () => {
   const home = document.getElementById("home");
   const presentation = document.createElement("div");
@@ -15,7 +28,7 @@ const home = () => {
   home.append(presentation);
 };
 
-// Menu phone
+// Menu 
 function setMenu() {
   let menu = document.getElementById("navMenu");
   let a = document.createElement("ul");
@@ -24,16 +37,16 @@ function setMenu() {
 <div class="toggle"><img src="assets/menu.svg" alt="Menu" /></div>
 <!-- Menus Secundarios -->
 <li style="--i: 0; --clr: #ff2972">
-  <button onclick="cleanerAbaut(),setAbaut()" id="btnAbaut"><img src="assets/abaut.png" alt="Abaut" /></button>
+  <button onclick="cleanerAbaut(),setAbaut()" id="btnAbaut"><img   src="assets/abaut.png" alt="Abaut" /></button>
 </li>
 <li style="--i: 1.25; --clr: #04fc43">
-  <button onclick="cleanerPerInf(),personalInfo()" id="btnPerInf"><img style="rotate:15deg;" src="assets/personal.png" alt="Personal info" /></button>
+  <button onclick="cleanerPerInf(),personalInfo()" id="btnPerInf"><img  id="imgP" src="assets/personal.png" alt="Personal info" /></button>
 </li>
 <li style="--i: 2.75; --clr: #00b0fe">
-  <button onclick="cleanerProyects(),setProyect()" id="btnProyects"><img style="rotate:105deg;" src="assets/proyects.png"  alt="Proyects" /></button>
+  <button onclick="cleanerProyects(),setProyect()" id="btnProyects"><img id="imgPr"   src="assets/proyects.png"  alt="Proyects" /></button>
 </li>
 <li style="--i: 4; --clr: #a529ff">
-  <button onclick="cleanerContact(),setContact()" id="btnContact"><img style="rotate:90deg;" src="assets/contact.png" alt="Contact" /></button>
+  <button onclick="cleanerContact(),setContact()" id="btnContact"><img  id="imgC" src="assets/contact.png" alt="Contact" /></button>
 </li>
 `;
   menu.append(a);
@@ -111,7 +124,7 @@ function setAbaut() {
   abt.innerHTML = `
   <div class="abautMe">
   <h2>Abaut Me</h2>
-  <p>I studied web development at Coderhause, looking for a new job horizon based on my tastes. At this moment I am developing my own projects to improve my skills and knowledge of layout and programming. I am also looking for job opportunities that help me continue learning and growing within this beautiful environment.    
+  <p>I studied web development at Coderhouse, looking for a new job horizon based on my tastes. At this moment I am developing my own projects to improve my skills and knowledge of layout and programming. I am also looking for job opportunities that help me continue learning and growing within this beautiful environment.    
   </p>
   <h3>Skills</h3>
   <div class="abautSkils">
@@ -309,4 +322,4 @@ function setContact() {
 }
 let size=window.innerWidth;
 console.log(size)  
-size < 600 ?  ( startTime(),setMenu(),home()) : (startTime(),setMenu())
+size < 600 ?  ( startTime(),setMenu(),home()) : (cleaner(),startTime(),setMenu())
