@@ -28,7 +28,7 @@ const home = () => {
   home.append(presentation);
 };
 
-// Menu 
+// Menu
 function setMenu() {
   let menu = document.getElementById("navMenu");
   let a = document.createElement("ul");
@@ -320,6 +320,8 @@ function setContact() {
   `;
   cont.append(setcont);
 }
-let size=window.innerWidth;
-console.log(size)  
-size < 600 ?  ( startTime(),setMenu(),home()) : (cleaner(),startTime(),setMenu())
+let size = window.innerWidth;
+console.log(size);
+size < 600
+  ? (startTime(), setMenu(), home())
+  : (cleaner(), startTime(), setMenu());
