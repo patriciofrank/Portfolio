@@ -322,6 +322,6 @@ function setContact() {
 }
 let size = window.innerWidth;
 console.log(size);
-size < 600
+size < 750
   ? (startTime(), setMenu(), home())
   : (cleaner(), startTime(), setMenu());

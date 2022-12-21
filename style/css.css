@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-@media (max-width: 599px) {
+@media (max-width: 749px) {
   html,
   body {
     margin: 0;
@@ -344,7 +344,7 @@
     font-size: 3rem;
   }
 }
-@media (min-width: 600px) {
+@media (min-width: 750px) {
   /* Menu */
   #navMenu {
     position: absolute;
