@@ -166,7 +166,6 @@ function personalInfo() {
     <p><span> Job Expectation </span> I want to continue learning new technologies and continue developing the ones I already know</p>
     <p><span> Lenguajes </span> English(intermediate) , Spanish(native) </p>
     </div>
-    
     </div>
     </div>
     `;
