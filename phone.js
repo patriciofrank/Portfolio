@@ -319,8 +319,11 @@ function setContact() {
   `;
   cont.append(setcont);
 }
-let size = window.innerWidth;
-console.log(size);
-size < 750
-  ? (startTime(), setMenu(), home())
-  : (cleaner(), startTime(), setMenu());
+
+cleaner();
+startTime();
+setMenu(); 
+home();
+
+
+
